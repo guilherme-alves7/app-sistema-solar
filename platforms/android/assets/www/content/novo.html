@@ -1,0 +1,30 @@
+<div class="toolbar card-panel teal darken-1">
+    <h1 id="pageTitle">NOVO CLIENTE</h1>
+    <a class="waves-effect waves-light btn-large btn-menu teal darken-1 z-depth-0" ng-tap="$navigate.go('/lista', 'slide', 'true')"><i class="material-icons">keyboard_backspace</i></a>
+</div>
+<div class="content panel" scrollable>
+    <p style="font-size: 20px;">
+        Novo
+    </p>
+    <div class="row">
+        <form method="post" class="col s12" name="formNovoCliente" novalidate>
+            <div class="input-field col m6 s12">
+                <i class="material-icons prefix">account_circle</i>
+                <input id="icon_prefix" type="text" class="validate" ng-model="cliente.nome" required="true" name="nome">
+                <label for="icon_prefix">Nome Completo</label>
+                <span ng-class="error" ng-show="formNovoCliente.nome.$error.required" class="red-text accent-4">*Nome é obrigatório</span>
+            </div>
+            <div class="input-field col m6 s12">
+                <i class="material-icons prefix">phone</i>
+                <input id="icon_telephone" type="tel" class="validate tel" ng-model="cliente.telefone" required="true" name="telefone" mask-tel-cel/>
+                <label for="icon_telephone">Telefone</label>
+                <span ng-class="error" ng-show="formNovoCliente.telefone.$error.required" class="red-text accent-4">*Telefone é obrigatório</span>
+            </div>
+            <div class="input-field col s12">
+                <button ng-disabled="formNovoCliente.$invalid" ng-click="adicionaCliente(cliente)" class="btn waves-effect waves-light right" type="submit" name="action">SALVAR
+                    <i class="material-icons right">send</i>
+                </button>                
+            </div>
+        </form>
+    </div>
+</div>

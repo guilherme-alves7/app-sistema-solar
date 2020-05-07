@@ -1,0 +1,72 @@
+<div class="toolbar card-panel teal darken-1">
+    <h1 id="pageTitle">EXERCÍCIOS</h1>
+    <a class="waves-effect waves-light btn-large btn-menu teal darken-1 z-depth-0" ng-tap="$navigate.back()"><i class="material-icons">clear</i></a>
+</div>
+<div class="content panel" scrollable>
+    <div class="row">
+        <form method="post" name="formExerc1" novalidate>
+            <div class="col s12">
+                <h5>Responda as questões:</h5>
+                <p>1 - Nunc malesuada pulvinar porta. Praesent aliquam sapien et urna sodales, vitae molestie neque euismod?</p>
+                <p ng-class="error" ng-show="formExerc1.exercicio1.$error.required" class="red-text accent-4">*Escolha uma alternativa</p>
+                <ul class="status-resposta collection">
+                    <li ng-show="listaExercicios[0].exercicios[0].acertou === true" class="collection-item green accent-1"><i class="material-icons right">check_circle</i> Resposta certa, parabéns!</li>
+                    <li ng-show="listaExercicios[0].exercicios[0].acertou === false" class="collection-item  red accent-1"><i class="material-icons right">error</i> Resposta errada, tente novamente!</li>
+                </ul>
+                <p>
+                    <input class="with-gap" name="exercicio1" type="radio" id="exerc1_A" ng-model="resp[0]" value='A' required="true" ng-checked="(listaExercicios[0].exercicios[0].alternativa_resp === 'A')?true:false"/>
+                    <label for="exerc1_A">Alternativa A</label>
+                </p>
+                <p>
+                    <input class="with-gap" name="exercicio1" type="radio" id="exerc1_B" ng-model="resp[0]" value='B' required="true"  ng-checked="(listaExercicios[0].exercicios[0].alternativa_resp === 'B')?true:false"/>
+                    <label for="exerc1_B">Alternativa B</label>
+                </p>
+                <p>
+                    <input class="with-gap" name="exercicio1" type="radio" id="exerc1_C" ng-model="resp[0]" value='C' required="true"  ng-checked="(listaExercicios[0].exercicios[0].alternativa_resp === 'C')?true:false"/>
+                    <label for="exerc1_C">Alternativa C</label>
+                </p>
+                <p>
+                    <input class="with-gap" name="exercicio1" type="radio" id="exerc1_D" ng-model="resp[0]" value='D' required="true"  ng-checked="(listaExercicios[0].exercicios[0].alternativa_resp === 'D')?true:false"/>
+                    <label for="exerc1_D">Alternativa D</label>
+                </p>
+                <p>
+                    <input class="with-gap" name="exercicio1" type="radio" id="exerc1_E" ng-model="resp[0]" value='E' required="true"  ng-checked="(listaExercicios[0].exercicios[0].alternativa_resp === 'E')?true:false"/>
+                    <label for="exerc1_E">Alternativa E</label>
+                </p>
+            </div>
+            <div class="col s12">
+                <p>2 - Nunc malesuada pulvinar porta. Praesent aliquam sapien et urna sodales, vitae molestie neque euismod?</p>
+                <p ng-class="error" ng-show="formExerc1.exercicio2.$error.required" class="red-text accent-4">*Escolha uma alternativa</p>
+                <ul class="status-resposta collection">
+                    <li ng-show="listaExercicios[0].exercicios[1].acertou === true" class="collection-item green accent-1"><i class="material-icons right">check_circle</i> Resposta certa, parabéns!</li>
+                    <li ng-show="listaExercicios[0].exercicios[1].acertou === false" class="collection-item  red accent-1"><i class="material-icons right">error</i> Resposta errada, tente novamente!</li>
+                </ul>
+                <p>
+                    <input class="with-gap" name="exercicio2" type="radio" id="exerc2_A" ng-model="resp[1]" value='A' required="true" ng-checked="(listaExercicios[0].exercicios[1].alternativa_resp === 'A')?true:false"/>
+                    <label for="exerc2_A">Alternativa A</label>
+                </p>
+                <p>
+                    <input class="with-gap" name="exercicio2" type="radio" id="exerc2_B" ng-model="resp[1]" value='B' required="true" ng-checked="(listaExercicios[0].exercicios[1].alternativa_resp === 'B')?true:false"/>
+                    <label for="exerc2_B">Alternativa B</label>
+                </p>
+                <p>
+                    <input class="with-gap" name="exercicio2" type="radio" id="exerc2_C" ng-model="resp[1]" value='C' required="true" ng-checked="(listaExercicios[0].exercicios[1].alternativa_resp === 'C')?true:false"/>
+                    <label for="exerc2_C">Alternativa C</label>
+                </p>
+                <p>
+                    <input class="with-gap" name="exercicio2" type="radio" id="exerc2_D" ng-model="resp[1]" value='D' required="true" ng-checked="(listaExercicios[0].exercicios[1].alternativa_resp === 'D')?true:false"/>
+                    <label for="exerc2_D">Alternativa D</label>
+                </p>
+                <p>
+                    <input class="with-gap" name="exercicio2" type="radio" id="exerc2_E" ng-model="resp[1]" value='E' required="true" ng-checked="(listaExercicios[0].exercicios[1].alternativa_resp === 'E')?true:false"/>
+                    <label for="exerc2_E">Alternativa E</label>
+                </p>
+                <p class="center">
+                    <button ng-disabled="formExerc1.$invalid" class="btn waves-effect waves-light blue" type="submit" name="action" ng-click="responderExerc(1,resp)">Responder
+                        <i class="material-icons right">send</i>
+                    </button>
+                </p>
+            </div>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,30 @@
+<div class="toolbar card-panel teal darken-1">
+    <h1 id="pageTitle">PÁGINA 1</h1>
+    <a class="waves-effect waves-light btn-large btn-menu teal darken-1 z-depth-0" ng-tap="$navigate.go('/menu', 'slide')"><i class="material-icons">menu</i></a>
+    <a class="waves-effect waves-light right btn-large btn-menu teal darken-1 z-depth-0" style="left: auto; right: 6px;" ng-tap="$navigate.go('/monkey')"><i class="material-icons">launch</i></a>    
+</div>
+<div class="content panel" scrollable>
+    Here's some content! 
+    <br/>
+    <div class="collection">
+        <a class="collection-item waves-effect waves-light" ng-tap="$navigate.go('/popup')">Let's see a modal!</a>
+    </div>
+    
+    <div class="col s12" init-modal> 
+        <!-- Modal Trigger -->
+        <button data-target="modal1" class="btn modal-trigger">Modal</button>
+
+        <!-- Modal Structure -->
+        <div id="modal1" class="modal">
+          <div class="modal-content">
+            <div init-zoom-image>
+                <img class="responsive-img" src="img/conteudo_educacional/urano.jpg"/>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <a href="javascript:void(0);" class="modal-action modal-close waves-effect waves-light btn-flat teal white-text">Fechar</a>
+          </div>
+        </div>
+    </div>
+</div>
+

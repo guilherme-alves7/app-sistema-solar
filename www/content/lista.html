@@ -1,0 +1,30 @@
+<div class="toolbar card-panel teal darken-1">
+    <h1 id="pageTitle">CLIENTES</h1>
+    <a class="waves-effect waves-light btn-large btn-menu teal darken-1 z-depth-0"  ng-tap="$navigate.go('/menu', 'slide')"><i class="material-icons">menu</i></a>
+</div>
+<div class="content panel" scrollable>
+    <table class="bordered">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Telefone</th>
+                <th></th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr ng-repeat="cliente in clientes track by $index">
+                <td>{{cliente.nome}}</td>
+                <td>{{cliente.telefone}}</td>
+                <td>
+                    <a ng-click="deleteCliente($index)" class="btn-delete-cliente btn-floating btn-large waves-effect waves-light red right"><i class="material-icons">delete_forever</i></a>
+                    <a ng-click="selectCliente($index)" class="btn-floating btn-large waves-effect waves-light blue right"><i class="large material-icons">mode_edit</i></a>
+                </td>
+            </tr>
+        </tbody>
+    </table>  
+    <br/><br/><br/>
+    <div class="grid-add-client">
+        <a ng-tap="$navigate.go('/novo', 'slide')" class="btn-floating btn-large waves-effect waves-light teal lighten-2 right"><i class="material-icons">add</i></a>
+    </div>
+</div>
